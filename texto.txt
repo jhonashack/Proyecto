@@ -13,3 +13,15 @@ git commit -m "primer modificacion" nombre o comentario de lo que se realiza
 git log --oneline  versiones de los commit o auditorio de lo que hemos hecho local
 
 
+git remote add origin https://github.com/jhonashack/Proyecto.git configurar el sito a donde ingresaremos
+
+git branch -M main  
+
+git push -u origin main  logueo de autorizacion 
+
+***cargar archivos despues de la modificacion"
+
+git add . añadimos los archivos localmente
+git commit "comentario" añadimos el comentario de lo que se realizo
+
+git push para cagar al repositorio de git hub las modificaciones
