@@ -1,1 +1,15 @@
 https://bluuweb.github.io/tutorial-github/01-fundamentos/#trucos
+
+git config --global user.name "jhonashack" configuracion de nombre
+
+git config --global user.email "jhoncadena401@gmail.com" configuracion email
+
+git init creacion de .git para trabajar local
+
+git add . añadimos todo los archivos al protecto
+
+git commit -m "primer modificacion" nombre o comentario de lo que se realiza
+
+git log --oneline  versiones de los commit o auditorio de lo que hemos hecho local
+
+
