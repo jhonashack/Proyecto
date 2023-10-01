@@ -6,7 +6,6 @@ navegador localhost:8000
 
 
 
-
 https://bluuweb.github.io/tutorial-github/01-fundamentos/#trucos
 
 git config --global user.name "jhonashack" configuracion de nombre
@@ -35,3 +34,16 @@ git add . añadimos los archivos localmente
 git commit "comentario" añadimos el comentario de lo que se realizo
 
 git push para cagar al repositorio de git hub las modificaciones directamente al repositorio
+
+
+
+// Servidor enlazado con pagina sin novedad
+
+
+
+
+
+
+
+
+

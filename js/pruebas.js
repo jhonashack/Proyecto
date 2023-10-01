@@ -1,4 +1,7 @@
 const http = require ("http")
+
+const fs = require("fs");//
+
 const host = "localhost"
 const port = 8000
 
@@ -8,10 +11,11 @@ const requestListener = function (req, res){
     res.end("mi primer serividor web con node.js");
 
 };
+
 const server = http.createServer(requestListener);
 server.listen(port, host ,()=> {
 
     console.log('node.js esta funcionando en el puerto 8000');
 
-
 });
+
