@@ -1,3 +1,12 @@
+Servidor en marcha 
+installar node.js
+cmd node Servidor.js
+
+navegador localhost:8000
+
+
+
+
 https://bluuweb.github.io/tutorial-github/01-fundamentos/#trucos
 
 git config --global user.name "jhonashack" configuracion de nombre
