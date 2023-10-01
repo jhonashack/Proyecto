@@ -4,9 +4,9 @@ git config --global user.name "jhonashack" configuracion de nombre
 
 git config --global user.email "jhoncadena401@gmail.com" configuracion email
 
-git init creacion de .git para trabajar local
+//git init creacion de .git para trabajar local 
 
-git add . añadimos todo los archivos al protecto
+git add . añadimos todo los archivos al proyecto
 
 git commit -m "primer modificacion" nombre o comentario de lo que se realiza
 
@@ -22,6 +22,7 @@ git push -u origin main  logueo de autorizacion
 ***cargar archivos despues de la modificacion"
 
 git add . añadimos los archivos localmente
+
 git commit "comentario" añadimos el comentario de lo que se realizo
 
-git push para cagar al repositorio de git hub las modificaciones
+git push para cagar al repositorio de git hub las modificaciones directamente al repositorio
