@@ -40,8 +40,8 @@ git push para cagar al repositorio de git hub las modificaciones directamente al
 // Servidor enlazado con pagina sin novedad
 
 
-
-
+// Instalar nodemon
+nodemon .\Servidor.js
 
 
 
