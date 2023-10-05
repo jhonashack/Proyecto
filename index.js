@@ -8,12 +8,15 @@ app.listen(PUERTO, function(){
 	console.log('Servidor http correindo en el puerto 8000');
 });
 
+app.use(express.static(path.join(__dirname, 'assets')));
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 app.get('/', function(req, res){
 	res.sendFile(path.join(__dirname, 'index.html'));
 	console.log('Se recibio una petición get');
 });
 
-app.use(express.static(__dirname + "/public"));
 
 app.get("/contacto", (req, res) => {
 	res.send("ruta de contacto 1");
