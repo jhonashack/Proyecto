@@ -47,3 +47,4 @@ nodemon .\Servidor.js
 
 
 
+ npx nodemon index.js

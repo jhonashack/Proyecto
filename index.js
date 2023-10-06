@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 const path = require('path');
 
-const PUERTO = 80;
+const PUERTO = 3000;
 
 app.listen(PUERTO, function(){
     console.log('Servidor http corriendo en el puerto 8000');
