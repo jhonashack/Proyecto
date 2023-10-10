@@ -16,6 +16,14 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname, 'index.html'));
     console.log('Se recibió una petición get');
 });
+app.get('/login.html', function(req, res){
+    res.sendFile(path.join(__dirname, 'login.html'));
+    console.log('Se recibió una petición get');
+});
+app.get('/register.html', function(req, res){
+    res.sendFile(path.join(__dirname, 'register.html'));
+    console.log('Se recibió una petición get');
+});
 
 // Mover la ruta de manejo de errores 404 después de la ruta para '/'
 app.use((req, res, next) => {
