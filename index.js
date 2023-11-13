@@ -5,7 +5,7 @@ const path = require('path');
 const PUERTO = 3000;
 
 app.listen(PUERTO, function(){
-    console.log('Servidor http corriendo en el puerto 8000');
+    console.log('Servidor http corriendo en el puerto 3000');
 });
 
 // Configurar Express para servir archivos estáticos desde la carpeta "assets"
