@@ -35,6 +35,19 @@ app.get('/login.html', function(req, res) {
   console.log('Se recibió una petición get');
 });
 
+app.get('/contact.html', function(req, res){
+  res.sendFile(path.join(__dirname, 'contact.html'));
+  console.log('Se recibió una petición get');
+});
+app.get('/about.html', function(req, res){
+  res.sendFile(path.join(__dirname, 'about.html'));
+  console.log('Se recibió una petición get');
+});
+    
+app.get('/index.html', function(req, res){
+  res.sendFile(path.join(__dirname, 'index.html'));
+  console.log('Se recibió una petición get');
+});
 app.get('/register.html', function(req, res) {
   res.sendFile(path.join(__dirname, 'register.html'));
   console.log('Se recibió una petición get');
