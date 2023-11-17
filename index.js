@@ -29,29 +29,32 @@ app.get('/', function(req, res) {
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-
-app.get('/login.html', function(req, res) {
-  res.sendFile(path.join(__dirname, 'login.html'));
-  console.log('Se recibió una petición get');
-});
-
-app.get('/contact.html', function(req, res){
-  res.sendFile(path.join(__dirname, 'contact.html'));
-  console.log('Se recibió una petición get');
-});
-app.get('/about.html', function(req, res){
-  res.sendFile(path.join(__dirname, 'about.html'));
-  console.log('Se recibió una petición get');
-});
-    
+  
 app.get('/index.html', function(req, res){
   res.sendFile(path.join(__dirname, 'index.html'));
+  console.log('Se recibió una petición get');
+});
+app.get('/login.html', function(req, res) {
+  res.sendFile(path.join(__dirname, 'login.html'));
   console.log('Se recibió una petición get');
 });
 app.get('/register.html', function(req, res) {
   res.sendFile(path.join(__dirname, 'register.html'));
   console.log('Se recibió una petición get');
 });
+app.get('/resenas.html', function(req, res){
+  res.sendFile(path.join(__dirname, 'resenas.html'));
+  console.log('Se recibió una petición get');
+});
+app.get('/cinemas.html', function(req, res){
+  res.sendFile(path.join(__dirname, 'cinemas.html'));
+  console.log('Se recibió una petición get');
+});
+app.get('/about.html', function(req, res){
+  res.sendFile(path.join(__dirname, 'about.html'));
+  console.log('Se recibió una petición get');
+});
+  
 
 // Rutas de autenticación
 app.use('/', authRoutes);
