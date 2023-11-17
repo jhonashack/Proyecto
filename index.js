@@ -1,31 +1,49 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const session = require('express-session');
 const path = require('path');
+const authRoutes = require('./authRoutes'); // Importa el módulo de inicio de sesión
+const authController = require('./authController'); // Reemplaza './authController' con la ruta correcta a tu controlador de autenticación
 
+const app = express();
 const PUERTO = 3000;
 
-app.listen(PUERTO, function(){
-    console.log('Servidor http corriendo en el puerto 3000');
+app.use(express.urlencoded({ extended: true }));
+
+app.use(session({
+    secret: 'mi-secreto', // Cambia 'mi-secreto' por una cadena secreta más segura
+    resave: false,
+    saveUninitialized: true
+}));
+
+app.listen(PUERTO, function() {
+  console.log('Servidor http corriendo en el puerto 3000');
 });
 
-// Configurar Express para servir archivos estáticos desde la carpeta "assets"
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
-app.get('/', function(req, res){
-    res.sendFile(path.join(__dirname, 'index.html'));
-    console.log('Se recibió una petición get');
-});
-app.get('/login.html', function(req, res){
-    res.sendFile(path.join(__dirname, 'login.html'));
-    console.log('Se recibió una petición get');
-});
-app.get('/register.html', function(req, res){
-    res.sendFile(path.join(__dirname, 'register.html'));
-    console.log('Se recibió una petición get');
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, 'index.html'));
+  console.log('Se recibió una petición get');
 });
 
-// Mover la ruta de manejo de errores 404 después de la ruta para '/'
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+app.get('/login.html', function(req, res) {
+  res.sendFile(path.join(__dirname, 'login.html'));
+  console.log('Se recibió una petición get');
+});
+
+app.get('/register.html', function(req, res) {
+  res.sendFile(path.join(__dirname, 'register.html'));
+  console.log('Se recibió una petición get');
+});
+
+// Rutas de autenticación
+app.use('/', authRoutes);
+
+// Manejo de errores 404
 app.use((req, res, next) => {
-    res.status(404).sendFile(__dirname + "/public/404.html");
+  res.status(404).sendFile(__dirname + '/public/404.html');
 });

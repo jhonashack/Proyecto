@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil de Usuario</title>
+    <!-- Agrega cualquier hoja de estilos CSS aquí -->
+    <style>
+        /* Estilos CSS para el perfil */
+        /* ... */
+    </style>
+</head>
+<body>
+    <h1>Perfil de Usuario</h1>
+    <ul>
+        <li>ID: <%= user.id %></li>
+        <li>Nombre: <%= user.nombre %></li>
+        <li>Correo: <%= user.correo %></li>
+        <!-- Otros detalles del perfil -->
+    </ul>
+
+    <!-- Botón para cerrar sesión -->
+    <form action="/logout" method="GET">
+        <input type="submit" value="Cerrar sesión">
+    </form>
+</body>
+</html>
