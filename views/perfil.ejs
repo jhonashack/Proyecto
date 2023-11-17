@@ -10,22 +10,22 @@
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(to right, #28a745, #218838);
             margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            padding: 20px;
             color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         h1 {
-            text-align: center;
             font-weight: 700;
         }
 
         ul {
             list-style: none;
             padding: 0;
-            text-align: center;
+            text-align: left;
+            margin-top: 10px;
         }
 
         li {
@@ -34,8 +34,8 @@
         }
 
         form {
-            text-align: center;
             margin-top: 20px;
+            align-self: flex-end;
         }
 
         input[type="submit"] {
@@ -47,6 +47,7 @@
             padding: 12px 20px;
             font-size: 16px;
             transition: transform 0.2s, box-shadow 0.2s;
+            margin-right: 10px;
         }
 
         input[type="submit"]:hover {
@@ -64,10 +65,21 @@
         <!-- Otros detalles del perfil -->
     </ul>
 
+    <!-- Botones adicionales -->
+    <form action="/agregar_resena.html" method="GET">
+        <input type="submit" value="Registrar Reseña">
+    </form>
+
+    <form action="/agregar_cine.html" method="GET">
+        <input type="submit" value="Registrar Cine">
+    </form>
+
     <!-- Botón para cerrar sesión -->
     <form action="/logout" method="GET">
         <input type="submit" value="Cerrar sesión">
     </form>
 </body>
 </html>
+
+
 

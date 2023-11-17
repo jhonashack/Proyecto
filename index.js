@@ -34,6 +34,14 @@ app.get('/index.html', function(req, res){
   res.sendFile(path.join(__dirname, 'index.html'));
   console.log('Se recibió una petición get');
 });
+app.get('/agregar_resena.html', function(req, res){
+  res.sendFile(path.join(__dirname, 'agregar_resena.html'));
+  console.log('Se recibió una petición get');
+});
+app.get('/agregar_cine.html', function(req, res){
+  res.sendFile(path.join(__dirname, 'agregar_cine.html'));
+  console.log('Se recibió una petición get');
+});
 app.get('/login.html', function(req, res) {
   res.sendFile(path.join(__dirname, 'login.html'));
   console.log('Se recibió una petición get');

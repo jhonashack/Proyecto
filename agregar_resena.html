@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Reseña</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #28a745, #218838);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            color: #333;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            color: #555;
+            font-weight: 600;
+        }
+
+        input {
+            width: calc(100% - 30px);
+            padding: 12px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 25px;
+            background-color: #f8f9fa;
+            transition: background-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            background-color: #e2e6ea;
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 25px;
+            padding: 12px;
+            margin-top: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            margin-top: 20px;
+            color: #666;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="/registrar-resena" method="POST">
+        <h1>Registrar Reseña</h1>
+
+        <label for="title">Título:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="description">Descripción:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+
+        <label for="rating">Calificación:</label>
+        <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+        <input type="submit" value="Registrar Reseña">
+    </form>
+</body>
+</html>
+
+
