@@ -45,13 +45,13 @@ router.get('/register', (req, res) => {
 });
 
 router.post('/register', async (req, res) => {
-  const { username, email, age, password } = req.body;
+  const { nombre, apellido, telefono, correo, clave } = req.body;
 
-  if (username && email && age && password) {
+  if (nombre && apellido && telefono && correo && clave) {
     try {
-      const hashedPassword = await bcrypt.hash(password, 10);
-      const query = 'INSERT INTO usuario (nombre, correo, edad, clave) VALUES (?, ?, ?, ?)';
-      db.query(query, [username, email, age, hashedPassword], (err, results) => {
+      const hashedPassword = await bcrypt.hash(clave, 10);
+      const query = 'INSERT INTO usuario (nombre, apellido, telefono, correo, clave) VALUES (?, ?, ?, ?, ?)';
+      db.query(query, [nombre, apellido, telefono, correo, hashedPassword], (err, results) => {
         if (err) {
           console.error('Error al registrar usuario:', err);
           res.status(500).send('Error al registrar usuario');
@@ -67,6 +67,7 @@ router.post('/register', async (req, res) => {
     res.send('Por favor, completa todos los campos');
   }
 });
+
 
 router.get('/logout', (req, res) => {
   req.session.destroy((err) => {
