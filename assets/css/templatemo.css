@@ -187,5 +187,13 @@ body, ul, li, p, a, label, input, div {
   }
 }
 
+#tempaltemo_footer {
+  text-align: center;
+}
+
+#tempaltemo_footer .col-md-10 {
+  margin: auto; /* Esto centrará el contenido dentro del contenedor */
+}
+
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {}
